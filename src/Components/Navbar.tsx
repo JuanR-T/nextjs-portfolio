@@ -1,10 +1,12 @@
+import Image from "next/image";
+import Link from "next/link";
 
 type Props = {}
 
 const Navbar = (props: Props) => {
     return (
-        <div className="sticky top-0 z-50">
-            <div className="navbar bg-base-100">
+        <div className="sticky w-[80%] top-0 z-50 bg-red-300">
+            <div className="navbar relative rounded-2xl bg-red-300">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,36 +26,25 @@ const Navbar = (props: Props) => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
+                            <li><a href="#Contact">À propos</a></li>
+                            <li><a href="#">Projets</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Image src="/juan-photo.jpg" alt="juan-photo" width={30} height={30} className="rounded-full" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><a href="#Contact">À propos</a></li>
+                        <li><a href="#">Projets</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link className="btn" href="https://github.com/JuanR-T" target="_blank">
+                        <Image src="/github.svg" alt="github-logo" width={20} height={20} className="rounded-full" />
+                        Github
+                    </Link>
                 </div>
             </div>
         </div>
