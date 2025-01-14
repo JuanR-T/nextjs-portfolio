@@ -3,7 +3,7 @@ type Props = {}
 
 const Footer = (props: Props) => {
     return (
-        <div>Footer</div>
+        <section id="footer">Footer</section>
     )
 }
 export default Footer;
