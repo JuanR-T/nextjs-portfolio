@@ -5,7 +5,6 @@ type Props = {}
 const Projects = (props: Props) => {
     const portfolioProjects = [
         {
-            id: 1,
             title: "Chat App",
             description: "A chat application that allows users to create rooms and chat with each other.",
             image: "/chat-app.png",
@@ -14,7 +13,6 @@ const Projects = (props: Props) => {
             technologies: ["React", "NodeJS", "SocketIO"],
         },
         {
-            id: 2,
             title: "Expenses Tracker",
             description: "An application that allows users to track their expenses and incomes.",
             image: "/expenses-tracker-app.png",
@@ -23,7 +21,6 @@ const Projects = (props: Props) => {
             technologies: ["React", "NodeJS", "GraphQL", "MongoDB", "ApolloGraphQL", "TailwindCSS", "Zustand"],
         },
         {
-            id: 3,
             title: "Project Management App",
             description: "An application that allows users to manage their projects.",
             image: "/project-management-app.png",
@@ -34,13 +31,13 @@ const Projects = (props: Props) => {
     ]
     return (
         <section id="projects" className="container md:min-h-screen">
-            <h2 className="text-3xl font-serif font-bold py-4">Mes Projets</h2>
+            <h2 className="text-5xl font-serif font-bold mt-20 mb-8">Mes Projets</h2>
             <p className="text-center mt-4">See how I transformed concepts into engaging digital experiences. </p>
-            <div key={1} className="grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">
-                {portfolioProjects.map((project) => (
+            <div key={1} className="relative grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">
+                {portfolioProjects.map((project, projectIndex) => (
                     <Card
-                        key={project.id}
-                        id={project.id}
+                        key={projectIndex}
+                        id={projectIndex}
                         title={project.title}
                         description={project.description}
                         image={project.image}

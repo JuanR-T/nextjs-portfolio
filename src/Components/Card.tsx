@@ -35,7 +35,11 @@ const techIcons: Record<string, JSX.Element> = {
 
 const Card = ({ id, title, description, image, prodLink, repositoryLink, technologies }: CardProps) => {
     return (
-        <div key={id} className="text-center md:text-left border-solid grid md:grid-cols-2 grid-cols-1 rounded-lg md:h-96 h-[100vh] w-full overflow-hidden shadow-2xl px-4 relative">
+        <div
+            key={id}
+            className="sticky top-20 text-center bg-base-100 md:text-left border-solid border-2 border-base-300 grid md:grid-cols-2 grid-cols-1 rounded-lg md:h-96 h-[100vh] w-full overflow-hidden shadow-t-md px-4"
+            style={{ top: `calc(64px + ${id * 40}px)` }}
+        >
             <div className="flex justify-between h-full">
                 <div className="p-4 flex flex-col w-full justify-between">
                     <h2 className="text-2xl font-bold">{title}</h2>
@@ -62,7 +66,7 @@ const Card = ({ id, title, description, image, prodLink, repositoryLink, technol
                     </div>
                 </div>
             </div>
-            <div className="h-full mt-10 w-full border-solid rounded-t-lg border-2 border-neutral relative">
+            <div className="h-full mt-16 w-full border-solid rounded-t-lg border-2 border-base-300 relative">
                 <Image src={image} alt={title} className="rounded-t-lg object-cover" fill={true} />
             </div>
         </div>
