@@ -1,9 +1,9 @@
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { JSX } from "react";
+import { JSX, useRef } from "react";
 import { SiApollographql, SiCss3, SiDaisyui, SiGraphql, SiHtml5, SiJavascript, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPrisma, SiReact, SiRedux, SiSocketdotio, SiTailwindcss } from "react-icons/si";
-
-
 type CardProps = {
     id: number;
     title: string;
@@ -12,6 +12,9 @@ type CardProps = {
     prodLink: string;
     repositoryLink: string;
     technologies: string[];
+    range?: any;
+    targetScale?: number;
+    progress?: any;
 }
 
 const techIcons: Record<string, JSX.Element> = {
@@ -33,43 +36,56 @@ const techIcons: Record<string, JSX.Element> = {
     Zustand: <img src="/icons/zustand.svg" alt="zustand-logo" className="w-6 h-6" />,
 };
 
-const Card = ({ id, title, description, image, prodLink, repositoryLink, technologies }: CardProps) => {
+const Card = ({ id, title, description, image, prodLink, repositoryLink, technologies, progress, range, targetScale }: CardProps) => {
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start end', 'start start'],
+    });
+    const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+
+    const scale = useTransform(progress, range, [1, targetScale]);
     return (
-        <div
+        <motion.div
+            ref={container}
             key={id}
-            className="sticky top-20 text-center bg-base-100 md:text-left border-solid border-2 border-base-300 grid md:grid-cols-2 grid-cols-1 rounded-lg md:h-96 h-[100vh] w-full overflow-hidden shadow-t-md px-4"
-            style={{ top: `calc(64px + ${id * 40}px)` }}
+            className="gap-4 sticky top-20 text-center bg-base-100 md:text-left border-solid border-2 border-base-300 grid md:grid-cols-2 grid-cols-1 rounded-lg h-96 w-full overflow-hidden shadow-t-md md:px-4"
+            style={{ scale, top: `calc(64px + ${id * 40}px)` }}
         >
             <div className="flex justify-between h-full">
                 <div className="p-4 flex flex-col w-full justify-between">
-                    <h2 className="text-2xl font-bold">{title}</h2>
-                    <p>{description}</p>
+                    <h2 className="text-2xl font-bold font-serif">{title}</h2>
+                    <p className="text-sm md:text-md lg:text-lg">{description}</p>
                     <div className="flex flex-row justify-between">
-                        <div className="flex w-30 justify-between rounded-xl cursor-pointer font-semibold p-2 transition hover:duration-300 hover:text-white hover:bg-slate-400">
-                            <a href={prodLink} target="_blank" className="flex ">
+                        <div className="btn btn-ghost cursor-pointer p-2 pl-3">
+                            <a href={prodLink} target="_blank" className="flex justify-center items-center ">
                                 Voir le projet
+                                <ArrowUpRight className="px-1" />
                             </a>
-                            <ArrowUpRight className="px-1" />
                         </div>
-                        <div className="flex w-30 justify-between rounded-xl cursor-pointer font-semibold p-2 transition hover:duration-300 hover:text-white hover:bg-slate-400">
-                            <a href={repositoryLink} target="_blank" className="">Voir le code</a>
-                            <ArrowUpRight className="px-1" />
+                        <div className="btn btn-ghost cursor-pointer p-2 pl-3">
+                            <a className="flex justify-center items-center" href={repositoryLink} target="_blank">
+                                Voir le code
+                                <ArrowUpRight className="px-1" />
+                            </a>
                         </div>
                     </div>
                     <div className="flex flex-row flex-wrap justify-center gap-2">
                         {technologies.map((technology) => (
                             <div key={technology} className="flex items-center gap-1">
-                                <span className="badge">{technology}</span>
+                                <span className="badge text-sm">{technology}</span>
                                 {techIcons[technology] || <span className="text-gray-500">?</span>} {/* Fallback for unknown tech */}
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-            <div className="h-full mt-16 w-full border-solid rounded-t-lg border-2 border-base-300 relative">
-                <Image src={image} alt={title} className="rounded-t-lg object-cover" fill={true} />
+            <div className="hidden md:flex h-full w-[100%] md:mt-16 border-solid border-8 border-base-300 overflow-hidden relative rounded-t-lg">
+                <motion.div style={{ scale: imageScale }} className="h-full w-full">
+                    <Image src={image} alt={title} className="rounded-t-lg object-cover" fill={true} />
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

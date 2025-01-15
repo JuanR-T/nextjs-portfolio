@@ -1,8 +1,11 @@
+"use client";
+import { useScroll } from "framer-motion";
+import Lenis from "lenis";
+import { useEffect, useRef } from "react";
 import Card from "./Card";
 
-type Props = {}
+const Projects = () => {
 
-const Projects = (props: Props) => {
     const portfolioProjects = [
         {
             title: "Chat App",
@@ -29,23 +32,53 @@ const Projects = (props: Props) => {
             technologies: ["React", "NextJS", "NodeJS", "PostgreSQL", "Redux", "Prisma"],
         },
     ]
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start start', 'end end'],
+    });
+
+    useEffect(() => {
+        const lenis = new Lenis({
+            autoRaf: true,
+            duration: 0.5,
+            easing: (t) => t ** 0.1,
+            smoothWheel: true,
+        });
+
+        function raf(time: any) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => lenis.destroy();
+    }, []);
+
     return (
         <section id="projects" className="container md:min-h-screen">
-            <h2 className="text-5xl font-serif font-bold mt-20 mb-8">Mes Projets</h2>
+            <h2 className="text-xl md:text-5xl font-serif font-bold mt-20 mb-8">Mes Projets</h2>
             <p className="text-center mt-4">See how I transformed concepts into engaging digital experiences. </p>
-            <div key={1} className="relative grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">
-                {portfolioProjects.map((project, projectIndex) => (
-                    <Card
-                        key={projectIndex}
-                        id={projectIndex}
-                        title={project.title}
-                        description={project.description}
-                        image={project.image}
-                        prodLink={project.prodLink}
-                        repositoryLink={project.repositoryLink}
-                        technologies={project.technologies}
-                    />
-                ))}
+            <div ref={container} key={1} className="relative grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">
+                {portfolioProjects.map((project, projectIndex) => {
+                    const targetScale = 1 - ((portfolioProjects.length - projectIndex)) * 0.05;
+                    return (
+                        <Card
+                            key={projectIndex}
+                            id={projectIndex}
+                            title={project.title}
+                            description={project.description}
+                            image={project.image}
+                            prodLink={project.prodLink}
+                            repositoryLink={project.repositoryLink}
+                            technologies={project.technologies}
+                            range={[projectIndex * 0.25, 1]}
+                            targetScale={targetScale}
+                            progress={scrollYProgress}
+                        />
+                    )
+                })}
             </div>
         </section>
 
