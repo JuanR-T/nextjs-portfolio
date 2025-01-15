@@ -27,10 +27,10 @@ const Navbar = (props: Props) => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a href="#about">À propos</a></li>
-                            <li><a href="#projects">Projets</a></li>
-                            <li><a href="#techstack">Technologies</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#about">À propos</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#projects">Projets</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#techstack">Technologies</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#contact">Contact</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -42,10 +42,10 @@ const Navbar = (props: Props) => {
                 </div>
                 <div className="hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#projects">Projets</a></li>
-                        <li><a href="#techstack">Technologies</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#about">À propos</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#projects">Projets</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#techstack">Technologies</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#contact">Contact</Link></li>
                     </ul>
                 </div>
                 <div className="absolute right-4 ">
