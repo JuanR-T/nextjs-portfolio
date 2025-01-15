@@ -11,7 +11,7 @@ const Projects = (props: Props) => {
             image: "/chat-app.png",
             prodLink: "https://node-react-chat-app-6cwi.onrender.com/login",
             repositoryLink: "https://github.com/JuanR-T/node-react-chat-app",
-            technologies: ["React", "Node.js", "Socket.io"],
+            technologies: ["React", "NodeJS", "SocketIO"],
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ const Projects = (props: Props) => {
             image: "/expenses-tracker-app.png",
             prodLink: "https://mern-graphql-expense-tracker-1.onrender.com/",
             repositoryLink: "https://github.com/JuanR-T/mern-graphql-expense-tracker",
-            technologies: ["React", "Node.js", "GraphQL", "MongoDB", "Apollo Client", "Tailwind CSS"],
+            technologies: ["React", "NodeJS", "GraphQL", "MongoDB", "ApolloGraphQL", "TailwindCSS", "Zustand"],
         },
         {
             id: 3,
@@ -29,11 +29,11 @@ const Projects = (props: Props) => {
             image: "/project-management-app.png",
             prodLink: "https://main.d25yzk9j3fwt2y.amplifyapp.com/dashboard",
             repositoryLink: "https://github.com/JuanR-T/nextjs-node-project-management-app",
-            technologies: ["React", "Next.js", "Node.js", "PostgreSQL", "Redux Toolkit", "Prisma", "Material-UI"],
+            technologies: ["React", "NextJS", "NodeJS", "PostgreSQL", "Redux", "Prisma"],
         },
     ]
     return (
-        <section id="projects" className="min-h-screen flex flex-col justify-center items-center w-full px-36">
+        <section id="projects" className="md:min-h-screen flex flex-col justify-center items-center w-full md:px-32 sm:px-16">
             <h2 className="text-3xl font-serif font-bold py-4">Mes Projets</h2>
             <p className="text-center mt-4">See how I transformed concepts into engaging digital experiences. </p>
             <div key={1} className="grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">
