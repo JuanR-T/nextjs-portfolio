@@ -54,7 +54,7 @@ const Card = ({ id, title, description, image, prodLink, repositoryLink, technol
         >
             <div className="flex justify-between h-full">
                 <div className="p-4 flex flex-col w-full justify-between">
-                    <h2 className="text-2xl font-bold font-serif">{title}</h2>
+                    <h2 className="md:text-2xl font-bold font-serif">{title}</h2>
                     <p className="text-sm md:text-md lg:text-lg">{description}</p>
                     <div className="flex flex-row justify-between">
                         <div className="btn btn-ghost cursor-pointer p-2 pl-3">
