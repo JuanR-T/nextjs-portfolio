@@ -33,7 +33,7 @@ const Projects = (props: Props) => {
         },
     ]
     return (
-        <section id="projects" className="md:min-h-screen flex flex-col justify-center items-center w-full md:px-32 sm:px-16">
+        <section id="projects" className="container md:min-h-screen">
             <h2 className="text-3xl font-serif font-bold py-4">Mes Projets</h2>
             <p className="text-center mt-4">See how I transformed concepts into engaging digital experiences. </p>
             <div key={1} className="grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">

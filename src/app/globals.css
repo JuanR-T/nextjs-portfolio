@@ -14,3 +14,8 @@ body,
     position: relative;
     scroll-behavior: smooth;
 }
+@layer utilities {
+    .container {
+        @apply flex flex-col justify-center items-center w-full px-4 md:px-4 lg:px-32 mb-16;
+    }
+}
