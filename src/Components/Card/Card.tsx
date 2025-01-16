@@ -4,18 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
-type CardProps = {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    prodLink: string;
-    repositoryLink: string;
-    technologies: string[];
-    range?: any;
-    targetScale?: number;
-    progress?: any;
-}
+import CardProps from "./Card.types";
 
 const Card = ({ id, title, description, image, prodLink, repositoryLink, technologies, progress, range, targetScale }: CardProps) => {
     const container = useRef(null);

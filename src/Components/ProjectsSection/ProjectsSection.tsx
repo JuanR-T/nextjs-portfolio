@@ -2,7 +2,7 @@
 import { portfolioProjects } from "@/data/data";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
-import Card from "./Card";
+import Card from "../Card/Card";
 
 const Projects = () => {
     const container = useRef(null);
