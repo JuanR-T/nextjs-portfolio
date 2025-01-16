@@ -22,7 +22,7 @@ const WorkExperience = () => {
             >
                 With experience in fullstack software engineering, I have contributed to building scalable web applications, integrating modern technologies, and delivering impactful solutions
             </motion.p>
-            <div className="w-full">
+            <div className="w-full mt-8">
                 {portfolioExperiences.map((experience, experienceIndex) => {
                     return (
                         <ExperienceItem

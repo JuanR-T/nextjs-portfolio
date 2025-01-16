@@ -7,7 +7,7 @@ export const portfolioExperiences = [
         missions: [
             "Création d’un SaaS",
             "Développement des sites internationaux HelloSafe",
-            "Création de thèmes / plugin wordpress custom",
+            "Création de thèmes / plugins Wordpress custom",
             "Rédaction de la documentation technique",
         ],
         link: "https://hellosafe.fr/",
@@ -28,7 +28,7 @@ export const portfolioExperiences = [
         location: "Paris - France",
         missions: [
             "Développement du site YesWeLab",
-            "Construction et gestion de la base de données du site",
+            "Construction de BDD",
             "Optimisation des performances",
             "Rédaction de la documentation technique",
         ],
