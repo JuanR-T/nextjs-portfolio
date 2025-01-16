@@ -18,4 +18,10 @@ body,
     .container {
         @apply flex flex-col justify-center items-center w-full px-4 md:px-4 lg:px-32;
     }
+    .section-title {
+        @apply text-xl md:text-5xl font-serif font-bold mt-20 mb-8;
+    }
+    .section-description {
+        @apply text-center m-10;
+    }
 }
