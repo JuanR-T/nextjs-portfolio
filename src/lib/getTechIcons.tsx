@@ -57,7 +57,7 @@ const getTechIcon = ({ technology, className }: GetTechIconProps) => {
             <img
                 src="/icons/zustand.svg"
                 alt="zustand-logo"
-                className={"w-5 h-5 md:w-14 md:h-14"}
+                className={`${className || "w-5 h-5 md:w-14 md:h-14"}`}
             />
         ),
     };

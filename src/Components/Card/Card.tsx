@@ -40,11 +40,10 @@ const Card = ({ id, title, description, image, prodLink, repositoryLink, technol
                             </a>
                         </div>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-center gap-2">
-                        {technologies.map((techString) => (
-                            <div key={techString} className="flex items-center gap-1">
-                                <span className="badge text-sm">{techString}</span>
-                                {getTechIcons({ technology: techString })}
+                    <div className="flex flex-row flex-wrap justify-start gap-3">
+                        {technologies.map((techString, index) => (
+                            <div key={index} className="tooltip flex cursor-pointer items-center gap-1" data-tip={techString}>
+                                {getTechIcons({ technology: techString, className: "w-10 h-10" })}
                             </div>
                         ))}
                     </div>
