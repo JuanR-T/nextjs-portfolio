@@ -9,9 +9,9 @@ import ExperienceItemProps from "./ExperienceItem.types";
 const ExperienceItem = ({ title, position, date, location, missions, stack, link }: ExperienceItemProps) => {
     return (
         <motion.div
-            initial={{ y: 48, opacity: 0 }}
+            initial={{ y: 90, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.75 }}
+            transition={{ ease: "easeInOut", duration: 0.85 }}
             className="mb-9 flex flex-col h-96 md:h-48 w-full border-b border-zinc-800 pb-9"
         >
             <div className="flex flex-col items-center md:flex-row w-full h-16 justify-between mb-4">
