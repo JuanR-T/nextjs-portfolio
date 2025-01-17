@@ -1,0 +1,9 @@
+{
+    "Navbar": {
+        "menu": {
+            "home": "Home",
+            "about": "About"
+        },
+        "about": "Go to the about page"
+    }
+}
