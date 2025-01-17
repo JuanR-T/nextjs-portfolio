@@ -3,6 +3,7 @@ import { portfolioProjects } from "@/data/data";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import Card from "../Card/Card";
+import SectionHeader from "../SectionHeader/SectionHeader";
 
 const Projects = () => {
     const container = useRef(null);
@@ -31,8 +32,10 @@ const Projects = () => {
 
     return (
         <section id="projects" className="container md:min-h-screen">
-            <h2 className="section-title">Mes Projets</h2>
-            <p className="section-description">Explore a collection of personal projects crafted to deepen my expertise, experiment with new technologies, and bring creative ideas to life. </p>
+            <SectionHeader
+                title="Mes Projets"
+                description="Explore a collection of personal projects crafted to deepen my expertise, experiment with new technologies, and bring creative ideas to life."
+            />
             <div ref={container} key={1} className="relative grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">
                 {portfolioProjects.map((project, projectIndex) => {
                     const targetScale = 1 - ((portfolioProjects.length - projectIndex)) * 0.05;
