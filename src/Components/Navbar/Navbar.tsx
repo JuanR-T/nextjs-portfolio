@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { contactData } from "@/data/data";
+import getTechIcon from "@/lib/getTechIcons";
 import Link from "next/link";
 import ThemeToggle from "../ThemeBtn/ThemeBtn";
 
@@ -26,26 +27,60 @@ const Navbar = (props: Props) => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li className="px-1"><Link className="btn btn-ghost" href="#about">À propos</Link></li>
+                            className="menu menu-sm justify-start items-start dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li className="px-1"><Link className="btn btn-ghost" href="#home">Home</Link></li>
                             <li className="px-1"><Link className="btn btn-ghost" href="#projects">Projets</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#work-experience">Experiences</Link></li>
                             <li className="px-1"><Link className="btn btn-ghost" href="#techstack">Technologies</Link></li>
-                            <li className="px-1"><Link className="btn btn-ghost" href="#contact">Contact</Link></li>
+                            <li className="px-1">
+                                <details className="px-0 dropdown btn btn-ghost">
+                                    <summary className="text-left">Contact</summary>
+                                    <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                        {contactData.map((contact, index) => {
+                                            return (
+                                                <li>
+                                                    <Link key={index} href={contact.link} className="" target="_blank">
+                                                        {getTechIcon({ technology: contact.title, className: "text-2xl" })}
+                                                        {contact.title}
+                                                    </Link>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </details>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div className="lg:absolute lg:left-4 lg:w-32 ">
                     <Link className="flex items-center gap-x-1" href="https://github.com/JuanR-T" target="_blank">
-                        <Image src="/github.svg" alt="github-logo" width={25} height={25} className="rounded-full" />
+                        {getTechIcon({ technology: "Github", className: "text-2xl" })}
                         <span className="px-1 font-bold">JuanR-T</span>
                     </Link>
                 </div>
                 <div className="hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className="px-1"><Link className="btn btn-ghost" href="#about">À propos</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#home">Home</Link></li>
                         <li className="px-1"><Link className="btn btn-ghost" href="#projects">Projets</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#work-experience">Experiences</Link></li>
                         <li className="px-1"><Link className="btn btn-ghost" href="#techstack">Technologies</Link></li>
-                        <li className="px-1"><Link className="btn btn-ghost" href="#contact">Contact</Link></li>
+                        <li className="px-1">
+                            <div className="btn btn-ghost dropdown dropdown-bottom dropdown-hover flex">
+                                Contact
+                                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                    {contactData.map((contact, index) => {
+                                        return (
+                                            <li>
+                                                <Link key={index} href={contact.link} className="cursor-pointer" target="_blank">
+                                                    {getTechIcon({ technology: contact.title, className: "text-2xl" })}
+                                                    {contact.title}
+                                                </Link>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div className="absolute right-4 ">

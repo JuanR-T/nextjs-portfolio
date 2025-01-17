@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        <section id="hero" className="container bg-base-100 h-[90vh]">
+        <section id="home" className="container bg-base-100 h-[90vh]">
             <div className="flex flex-col items-center justify-center w-full">
                 <img
                     src="/juan-memoji-working.png"
