@@ -7,6 +7,7 @@ import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import StackSection from "@/components/StackSection/StackSection";
 
 const Home = () => {
+  {/** TODO: Check lazy loading components with next/dynamic */ }
   return (
     <>
       <Navbar />
