@@ -103,3 +103,18 @@ export const masteredTechnologies = [
     "Prisma",
     "PostgreSQL",
 ];
+
+export const contactData = [
+    {
+        title: "Mail",
+        link: "mailto:j.restrepo.dev@gmail.com",
+    },
+    {
+        title: "LinkedIn",
+        link: "https://www.linkedin.com/in/juan-r-3699b51aa/",
+    },
+    {
+        title: "Github",
+        link: "https://github.com/JuanR-T",
+    },
+];
