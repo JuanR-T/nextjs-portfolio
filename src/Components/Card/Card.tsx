@@ -41,10 +41,10 @@ const Card = ({ id, title, description, image, prodLink, repositoryLink, technol
                         </div>
                     </div>
                     <div className="flex flex-row flex-wrap justify-center gap-2">
-                        {technologies.map((technology) => (
-                            <div key={technology} className="flex items-center gap-1">
-                                <span className="badge text-sm">{technology}</span>
-                                {getTechIcons[technology] || <span className="text-gray-500">?</span>}
+                        {technologies.map((techString) => (
+                            <div key={techString} className="flex items-center gap-1">
+                                <span className="badge text-sm">{techString}</span>
+                                {getTechIcons({ technology: techString })}
                             </div>
                         ))}
                     </div>
