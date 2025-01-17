@@ -17,11 +17,11 @@ const LanguageSelector = () => {
     };
     return (
         <div className="dropdown dropdown-hover">
-            <div className="px-3 pt-1 text-sm font-semibold uppercase flex justify-end items-center">
+            <button className="px-3 pt-1 text-sm font-semibold uppercase flex justify-end items-center">
                 {currentLocale}
                 <ChevronDown />
-            </div>
-            <ul tabIndex={0} className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow">
+            </button>
+            <ul tabIndex={0} className="dropdown-content menu rounded-box bg-base-100 p-2 shadow">
                 {availableLanguages.map((lang, index) => (
                     <li key={index}>
                         <button onClick={() => handleLanguageChange(lang.locale)} className="w-full text-left">

@@ -56,7 +56,7 @@ const Navbar = () => {
                 <div className="lg:absolute lg:left-4 lg:w-32 ">
                     <Link className="flex items-center gap-x-1" href="https://github.com/JuanR-T" target="_blank">
                         {getTechIcon({ technology: "Github", className: "text-2xl" })}
-                        <span className="px-1 font-bold">JuanR-T</span>
+                        <span className="px-1 hidden md:flex font-bold">JuanR-T</span>
                     </Link>
                 </div>
                 <div className="hidden lg:flex">
