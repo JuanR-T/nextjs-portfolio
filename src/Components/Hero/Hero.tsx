@@ -22,12 +22,16 @@ const Hero = () => {
                     </p>
 
                     <div className="flex w-auto items-center justify-center md:flex-wrap-reverse gap-2 flex-wrap">
-                        <button className="btn btn-sm btn-outline !w-52 md:w-44 flex rounded-lg mx-4">
+                        <a
+                            href="/cv.pdf"
+                            download="CV_Fullstack_Dev_Juan_Restrepo_Compressed.pdf"
+                            className="btn btn-sm btn-outline !w-56 md:w-44 flex rounded-lg mx-4"
+                        >
                             Télécharger mon CV
-                            <Download className="" />
-                        </button>
-                        <Link className="btn btn-sm btn-outline !w-52 mx-4 rounded-lg" href="#projects">
-                            <span className="font-bold">Voir mon travail</span>
+                            <Download className="ml-2" />
+                        </a>
+                        <Link className="btn btn-sm btn-outline !w-56 mx-4 rounded-lg" href="#projects">
+                            <span>Voir mon travail</span>
                             <ArrowDown className="animate-bounce" />
                         </Link>
                     </div>
