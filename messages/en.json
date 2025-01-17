@@ -2,8 +2,116 @@
     "Navbar": {
         "menu": {
             "home": "Home",
-            "about": "About"
+            "projects": "Projects",
+            "experiences": "Experiences",
+            "technologies": "Technologies",
+            "contact": "Contact"
+        }
+    },
+    "Hero": {
+        "title": "Fullstack Sofware Engineer",
+        "subtitle": "Available for work",
+        "description": "Hello, I'm Juan ! I hold a Master's degree from the HETIC IT school and have 3 years of experience working on startups as a Fullstack Software Engineer. I am looking to join a dynamic, agile and humane team that will match my ambitious and persevering mindset ! Participating in exciting projects, learning new technologies, and thriving with my coworkers is what I desire.",
+        "downloadCTA": "Download my resume",
+        "redirectCTA": "See my work"
+    },
+    "ProjectsSection": {
+        "title": "Projects",
+        "description": "Explore a collection of personal projects crafted to deepen my expertise, experiment with new technologies, and bring creative ideas to life.",
+        "Card": {
+            "prodLinkCTA": "See the live project",
+            "repositoryLinkCTA": "See the code"
+        }
+    },
+    "Projects": {
+        "firstItem": {
+            "title": "Chat App",
+            "description": "A chat application allowing users to create rooms and chat with each other in real time.",
+            "image": "/chat-app.png",
+            "prodLink": "https://node-react-chat-app-6cwi.onrender.com/login",
+            "repositoryLink": "https://github.com/JuanR-T/node-react-chat-app",
+            "technologies": ["React", "NodeJS", "SocketIO"]
         },
-        "about": "Go to the about page"
+        "secondItem": {
+            "title": "Project Management App",
+            "description": "An application that allows teams to manage their projects and tasks, using Kanban boards, tables and timelines.",
+            "image": "/project-management-app.png",
+            "prodLink": "https://main.d25yzk9j3fwt2y.amplifyapp.com/dashboard",
+            "repositoryLink": "https://github.com/JuanR-T/nextjs-node-project-management-app",
+            "technologies": [
+                "React",
+                "NextJS",
+                "NodeJS",
+                "PostgreSQL",
+                "Redux",
+                "Prisma"
+            ]
+        },
+        "thirdItem": {
+            "title": "Expenses Tracker",
+            "description": "An application that allows users to track their expenses and incomes and visualize them in a chart.",
+            "image": "/expenses-tracker-app.png",
+            "prodLink": "https://mern-graphql-expense-tracker-1.onrender.com/",
+            "repositoryLink": "https://github.com/JuanR-T/mern-graphql-expense-tracker",
+            "technologies": [
+                "React",
+                "NodeJS",
+                "GraphQL",
+                "MongoDB",
+                "Apollo",
+                "TailwindCSS",
+                "Zustand"
+            ]
+        }
+    },
+    "ExperienceSection": {
+        "title": "Experiences",
+        "description": "With 3 years experience in fullstack software engineering, I have contributed to building scalable web applications, integrating modern technologies, and delivering impactful solutions.",
+        "experienceSiteCTA": "See the website"
+    },
+    "Experiences": {
+        "fistItem": {
+            "title": "Hellosafe",
+            "position": "Fullstack Software Engineer",
+            "date": "October 2021 - January 2024",
+            "location": "Paris - France",
+            "missions": [
+                "Creation of a SaaS platform",
+                "Development of international HelloSafe websites",
+                "Creation of custom WordPress themes/plugins",
+                "Writing technical documentation"
+            ],
+            "link": "https://hellosafe.fr/",
+            "stack": [
+                "React",
+                "NextJS",
+                "NodeJS",
+                "Typescript",
+                "Jest",
+                "PHP",
+                "AWS"
+            ]
+        },
+        "secondItem": {
+            "title": "YesWeLab",
+            "position": "Fullstack Software Engineer",
+            "date": "September 2020 - August 2021",
+            "location": "Paris - France",
+            "missions": [
+                "Development of the YesWeLab website",
+                "Database construction",
+                "Performance optimization",
+                "Writing technical documentation"
+            ],
+            "link": "https://en.yeswelab.fr/",
+            "stack": ["React", "Typescript", "PHP", "SCSS", "MySQL"]
+        }
+    },
+    "StackSection": {
+        "title": "Technologies",
+        "description": "These are the technologies I use to build your ideas."
+    },
+    "Footer": {
+        "rights": "All rights reserved"
     }
 }

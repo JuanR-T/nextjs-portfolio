@@ -30,12 +30,12 @@ const Navbar = () => {
                             tabIndex={0}
                             className="menu menu-sm justify-start items-start dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <li className="px-1"><Link className="btn btn-ghost" href="#home">{t("menu.home")}</Link></li>
-                            <li className="px-1"><Link className="btn btn-ghost" href="#projects">Projets</Link></li>
-                            <li className="px-1"><Link className="btn btn-ghost" href="#work-experience">Experiences</Link></li>
-                            <li className="px-1"><Link className="btn btn-ghost" href="#techstack">Technologies</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#projects">{t("menu.projects")}</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#work-experience">{t("menu.experiences")}</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#techstack">{t("menu.technologies")}</Link></li>
                             <li className="px-1">
                                 <details className="px-0 dropdown btn btn-ghost">
-                                    <summary className="text-left">Contact</summary>
+                                    <summary className="text-left">{t("menu.contact")}</summary>
                                     <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                                         {contactData.map((contact, index) => {
                                             return (
@@ -62,12 +62,12 @@ const Navbar = () => {
                 <div className="hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li className="px-1"><Link className="btn btn-ghost" href="#home">{t("menu.home")}</Link></li>
-                        <li className="px-1"><Link className="btn btn-ghost" href="#projects">Projets</Link></li>
-                        <li className="px-1"><Link className="btn btn-ghost" href="#work-experience">Experiences</Link></li>
-                        <li className="px-1"><Link className="btn btn-ghost" href="#techstack">Technologies</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#projects">{t("menu.projects")}</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#work-experience">{t("menu.experiences")}</Link></li>
+                        <li className="px-1"><Link className="btn btn-ghost" href="#techstack">{t("menu.technologies")}</Link></li>
                         <li className="px-1">
                             <div className="btn btn-ghost dropdown dropdown-bottom dropdown-hover flex">
-                                Contact
+                                {t("menu.contact")}
                                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                                     {contactData.map((contact, index) => {
                                         return (

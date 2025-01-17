@@ -2,11 +2,13 @@
 import getTechIcons from "@/lib/getTechIcons";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef } from "react";
 import CardProps from "./Card.types";
 
 const Card = ({ id, title, description, image, prodLink, repositoryLink, technologies, progress, range, targetScale }: CardProps) => {
+    const t = useTranslations("ProjectsSection");
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -29,13 +31,13 @@ const Card = ({ id, title, description, image, prodLink, repositoryLink, technol
                     <div className="flex flex-row justify-between">
                         <div className="btn btn-ghost cursor-pointer p-2 pl-3">
                             <a href={prodLink} target="_blank" className="flex justify-center items-center ">
-                                Voir le projet
+                                {t("Card.prodLinkCTA")}
                                 <ArrowUpRight className="px-1" />
                             </a>
                         </div>
                         <div className="btn btn-ghost cursor-pointer p-2 pl-3">
                             <a className="flex justify-center items-center" href={repositoryLink} target="_blank">
-                                Voir le code
+                                {t("Card.repositoryLinkCTA")}
                                 <ArrowUpRight className="px-1" />
                             </a>
                         </div>

@@ -12,11 +12,11 @@ const StackSection = () => {
         offset: ['start end', 'start start'],
     });
     const iconScale = useTransform(scrollYProgress, [1, 0], [1, 1.5]);
+    console.log(masteredTechnologies, "masteredTechnologies");
     return (
         <section id="techstack" className="container md:min-h-screen">
             <SectionHeader
-                title="Mes Technologies"
-                description="These are the technologies I mastered"
+                intlNamespace="StackSection"
             />
             <div ref={container} className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-10 mt-8">
                 {masteredTechnologies.map((technology, index) => {

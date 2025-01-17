@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { FiMapPin } from "react-icons/fi";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import ExperienceItemProps from "./ExperienceItem.types";
 
 const ExperienceItem = ({ title, position, date, location, missions, stack, link }: ExperienceItemProps) => {
+    const t = useTranslations("ExperienceSection");
     return (
         <motion.div
             initial={{ y: 90, opacity: 0 }}
@@ -26,7 +28,7 @@ const ExperienceItem = ({ title, position, date, location, missions, stack, link
                     </div>
                     <div className="text-sm">
                         <a href={link} target="_blank" className="flex font-medium justify-center items-center ">
-                            Voir le site
+                            {t("experienceSiteCTA")}
                             <ArrowUpRight className="px-1" />
                         </a>
                     </div>

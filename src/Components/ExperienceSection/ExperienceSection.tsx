@@ -1,17 +1,27 @@
 "use client";
-import { portfolioExperiences } from "@/data/data";
+import { useMessages, useTranslations } from "next-intl";
 import ExperienceItem from "../ExperienceItem/ExperienceItem";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
 const WorkExperience = () => {
+    const t = useTranslations("Experiences");
+    const messages = useMessages();
+    const experiences = Object.keys(messages.Experiences).map(key => ({
+        title: t(`${key}.title`),
+        position: t(`${key}.position`),
+        date: t(`${key}.date`),
+        location: t(`${key}.location`),
+        missions: t.raw(`${key}.missions`),
+        link: t(`${key}.link`),
+        stack: t.raw(`${key}.stack`)
+    }));
     return (
         <section id="work-experience" className="container md:min-h-screen">
             <SectionHeader
-                title="Experiences"
-                description="With experience in fullstack software engineering, I have contributed to building scalable web applications, integrating modern technologies, and delivering impactful solutions"
+                intlNamespace="ExperienceSection"
             />
             <div className="w-full mt-8">
-                {portfolioExperiences.map((experience, experienceIndex) => {
+                {experiences.map((experience, experienceIndex) => {
                     return (
                         <ExperienceItem
                             key={experienceIndex}

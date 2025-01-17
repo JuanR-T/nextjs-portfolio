@@ -1,6 +1,5 @@
 type SectionHeaderProps = {
-    title: string;
-    description: string;
+    intlNamespace: string;
 };
 
 export default SectionHeaderProps;
