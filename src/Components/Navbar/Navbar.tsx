@@ -2,7 +2,8 @@ import { contactData } from "@/data/data";
 import getTechIcon from "@/lib/getTechIcons";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import ThemeToggle from "../ThemeBtn/ThemeBtn";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 const Navbar = () => {
     const t = useTranslations("Navbar");
@@ -28,7 +29,7 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm justify-start items-start dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li className="px-1"><Link className="btn btn-ghost" href="#home">{t("Navbar.menu.home")}</Link></li>
+                            <li className="px-1"><Link className="btn btn-ghost" href="#home">{t("menu.home")}</Link></li>
                             <li className="px-1"><Link className="btn btn-ghost" href="#projects">Projets</Link></li>
                             <li className="px-1"><Link className="btn btn-ghost" href="#work-experience">Experiences</Link></li>
                             <li className="px-1"><Link className="btn btn-ghost" href="#techstack">Technologies</Link></li>
@@ -83,8 +84,9 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="absolute right-4 ">
-                    <ThemeToggle />
+                <div className="absolute right-4 flex justify-center">
+                    <LanguageSwitcher />
+                    <ThemeSwitcher />
                 </div>
             </div>
         </div>

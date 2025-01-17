@@ -118,3 +118,16 @@ export const contactData = [
         link: "https://github.com/JuanR-T",
     },
 ];
+
+export const availableLanguages = [
+    {
+        locale: "en",
+        label: "English",
+        flag: "🇺🇸",
+    },
+    {
+        locale: "fr",
+        label: "Français",
+        flag: "🇫🇷",
+    },
+];
