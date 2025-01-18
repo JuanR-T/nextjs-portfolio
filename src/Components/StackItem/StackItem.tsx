@@ -15,7 +15,7 @@ const StackItem = ({ index, technology, iconScale }: StackItemProps) => {
             >
                 <span className="py-1 mb-2 text-sm font-semibold">{technology}</span>
                 <motion.span style={{ scale: iconScale }} className="md:pt-4">
-                    {getTechIcons({ technology, className: "w-6 h-6 md:w-14 h-14" })}
+                    {getTechIcons({ technology, className: "w-6 h-6 md:w-14 md:h-14" })}
                 </motion.span>
             </motion.div>
         </>
