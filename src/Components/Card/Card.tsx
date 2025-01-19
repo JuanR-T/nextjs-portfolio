@@ -1,10 +1,10 @@
 "use client";
+import getTechIcons from "@/lib/getTechIcons";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRef } from "react";
-import getTechIcons from "../../lib/getTechIcons";
 import CardProps from "./Card.types";
 
 const Card = ({ id, title, description, image, prodLink, repositoryLink, technologies, progress, range, targetScale }: CardProps) => {

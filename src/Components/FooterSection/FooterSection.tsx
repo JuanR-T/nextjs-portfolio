@@ -1,7 +1,7 @@
+import { contactData } from "@/data/data";
+import getTechIcon from "@/lib/getTechIcons";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { contactData } from "../../data/data";
-import getTechIcon from "../../lib/getTechIcons";
 
 const FooterSection = () => {
     const currentYear = new Date().getFullYear();

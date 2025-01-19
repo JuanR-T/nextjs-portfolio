@@ -1,10 +1,10 @@
+import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from "next-intl/server";
 import { Montserrat, Roboto_Serif } from "next/font/google";
 import { notFound } from "next/navigation";
 import { twMerge } from "tailwind-merge";
-import { routing } from "../../i18n/routing";
 import "../globals.css";
 
 const montserrat = Montserrat({
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params: { locale: string };
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
