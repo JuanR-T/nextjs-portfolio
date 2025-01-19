@@ -1,4 +1,3 @@
-import AboutSection from "@/components/AboutSection/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection/ExperienceSection";
 import Footer from "@/components/FooterSection/FooterSection";
 import Hero from "@/components/Hero/Hero";
@@ -13,9 +12,8 @@ const Home = () => {
       <Navbar />
       <Hero />
       <ProjectsSection />
-      <StackSection />
       <ExperienceSection />
-      <AboutSection />
+      <StackSection />
       <Footer />
     </>
   );

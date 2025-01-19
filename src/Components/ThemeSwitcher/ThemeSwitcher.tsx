@@ -1,7 +1,7 @@
 
 import { Moon, Sun } from "lucide-react";
 
-const ThemeBtn = () => {
+const ThemeSwitcher = () => {
     return (
         <label className="swap swap-rotate">
             <input type="checkbox" className="theme-controller" value="black" />
@@ -13,4 +13,4 @@ const ThemeBtn = () => {
     )
 }
 
-export default ThemeBtn
+export default ThemeSwitcher

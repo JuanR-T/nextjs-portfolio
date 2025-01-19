@@ -1,8 +1,10 @@
 "use client";
 import { portfolioProjects } from "@/data/data";
 import { useScroll } from "framer-motion";
+import { useMessages, useTranslations } from "next-intl";
 import { useRef } from "react";
 import Card from "../Card/Card";
+import SectionHeader from "../SectionHeader/SectionHeader";
 
 const Projects = () => {
     const container = useRef(null);
@@ -10,31 +12,25 @@ const Projects = () => {
         target: container,
         offset: ['start start', 'end end'],
     });
-
-    // useEffect(() => {
-    //     const lenis = new Lenis({
-    //         autoRaf: true,
-    //         duration: 0.5,
-    //         easing: (t) => t ** 0.1,
-    //         smoothWheel: true,
-    //     });
-
-    //     function raf(time: any) {
-    //         lenis.raf(time);
-    //         requestAnimationFrame(raf);
-    //     }
-
-    //     requestAnimationFrame(raf);
-
-    //     return () => lenis.destroy();
-    // }, []);
+    const t = useTranslations("Projects");
+    const messages = useMessages();
+    const projectKeys = Object.keys(messages.Projects);
+    const projects = projectKeys.map(key => ({
+        title: t(`${key}.title`),
+        description: t(`${key}.description`),
+        image: t(`${key}.image`),
+        prodLink: t(`${key}.prodLink`),
+        repositoryLink: t(`${key}.repositoryLink`),
+        technologies: t.raw(`${key}.technologies`),
+    }));
 
     return (
         <section id="projects" className="container md:min-h-screen">
-            <h2 className="section-title">Mes Projets</h2>
-            <p className="section-description">Explore a collection of personal projects crafted to deepen my expertise, experiment with new technologies, and bring creative ideas to life. </p>
+            <SectionHeader
+                intlNamespace="ProjectsSection"
+            />
             <div ref={container} key={1} className="relative grid md:grid-cols-1 sm:grid-cols-1 gap-6 h-full w-full mt-8">
-                {portfolioProjects.map((project, projectIndex) => {
+                {projects.map((project: any, projectIndex: any) => {
                     const targetScale = 1 - ((portfolioProjects.length - projectIndex)) * 0.05;
                     return (
                         <Card

@@ -1,0 +1,117 @@
+{
+    "Navbar": {
+        "menu": {
+            "home": "Accueil",
+            "projects": "Projets",
+            "experiences": "Expériences",
+            "technologies": "Technologies",
+            "contact": "Contact"
+        }
+    },
+    "Hero": {
+        "title": "Développeur Fullstack",
+        "subtitle": "En recherche d'emploi",
+        "description": "Salut, c'est Juan ! Je suis titulaire d'un bac+5 réalisé à l'école HETIC et j'ai 3 ans d'expérience en startup en tant que développeur fullstack. Je cherche à intégrer une équipe dynamique, agile et humaine, qui saura valoriser mon profil ambitieux et persévérant. Je souhaite participer à des projets stimulants, apprendre de nouvelles technologies et en faire profiter mes collaborateurs.",
+        "downloadCTA": "Télécharger mon CV",
+        "redirectCTA": "Voir mon travail"
+    },
+    "ProjectsSection": {
+        "title": "Projets",
+        "description": "Découvrez une collection de projets conçus pour approfondir mon expertise, expérimenter de nouvelles technologies et donner vie à des idées créatives.",
+        "Card": {
+            "prodLinkCTA": "Voir le site",
+            "repositoryLinkCTA": "Voir le code"
+        }
+    },
+    "Projects": {
+        "firstItem": {
+            "title": "Chat App",
+            "description": "Une application de chat permettant aux utilisateurs de créer des salons et de discuter entre eux en temps réel.",
+            "image": "/chat-app.png",
+            "prodLink": "https://node-react-chat-app-6cwi.onrender.com/login",
+            "repositoryLink": "https://github.com/JuanR-T/node-react-chat-app",
+            "technologies": ["React", "NodeJS", "SocketIO"]
+        },
+        "secondItem": {
+            "title": "Project Management App",
+            "description": "Une application qui permet aux équipes de gérer leurs projets et tâches, en utilisant des tableaux Kanban, des tables et des timelines.",
+            "image": "/project-management-app.png",
+            "prodLink": "https://main.d25yzk9j3fwt2y.amplifyapp.com/dashboard",
+            "repositoryLink": "https://github.com/JuanR-T/nextjs-node-project-management-app",
+            "technologies": [
+                "React",
+                "NextJS",
+                "NodeJS",
+                "PostgreSQL",
+                "Redux",
+                "Prisma"
+            ]
+        },
+        "thirdItem": {
+            "title": "Expenses Tracker",
+            "description": "Une application qui permet aux utilisateurs de suivre leurs dépenses et revenus, et de les visualiser dans un graphique en temps réel.",
+            "image": "/expenses-tracker-app.png",
+            "prodLink": "https://mern-graphql-expense-tracker-1.onrender.com/",
+            "repositoryLink": "https://github.com/JuanR-T/mern-graphql-expense-tracker",
+            "technologies": [
+                "React",
+                "NodeJS",
+                "GraphQL",
+                "MongoDB",
+                "Apollo",
+                "TailwindCSS",
+                "Zustand"
+            ]
+        }
+    },
+    "ExperienceSection": {
+        "title": "Expériences",
+        "description": "Fort de 3 ans d'expérience en développement fullstack, j'ai contribué à la création d'applications web évolutives ainsi qu'à l'intégration de technologies modernes et à la livraison de solutions pérennes.",
+        "experienceSiteCTA": "Voir le site"
+    },
+    "Experiences": {
+        "fistItem": {
+            "title": "Hellosafe",
+            "position": "Développeur Fullstack",
+            "date": "Octobre 2021 - Janvier 2024",
+            "location": "Paris - France",
+            "missions": [
+                "Création d'une plateforme SaaS",
+                "Développement des sites internationaux HelloSafe",
+                "Création de thèmes/plugins WordPress sur mesure",
+                "Rédaction de documentation technique"
+            ],
+            "link": "https://hellosafe.fr/",
+            "stack": [
+                "React",
+                "NextJS",
+                "NodeJS",
+                "Typescript",
+                "Jest",
+                "PHP",
+                "AWS"
+            ]
+        },
+        "secondItem": {
+            "title": "YesWeLab",
+            "position": "Développeur Fullstack",
+            "date": "Septembre 2020 - Août 2021",
+            "location": "Paris - France",
+            "missions": [
+                "Développement du site YesWeLab",
+                "Construction de bases de données",
+                "Optimisation des performances",
+                "Rédaction de documentation technique"
+            ],
+            "link": "https://en.yeswelab.fr/",
+            "stack": ["React", "Typescript", "PHP", "SCSS", "MySQL"]
+        }
+    },
+    "StackSection": {
+        "title": "Technologies",
+        "description": "Voici les technologies que j'utilise pour donner vie à vos idées."
+    },
+    "Footer": {
+        "rights": "Tous droits réservés"
+    }
+}

@@ -1,13 +1,16 @@
 import { JSX } from "react";
 import { FaAws } from "react-icons/fa";
+import { GrMailOption } from "react-icons/gr";
 import {
     SiApollographql,
     SiCss3,
     SiDaisyui,
+    SiGithub,
     SiGraphql,
     SiHtml5,
     SiJavascript,
     SiJest,
+    SiLinkedin,
     SiMongodb,
     SiMysql,
     SiNextdotjs,
@@ -47,11 +50,14 @@ const getTechIcon = ({ technology, className }: GetTechIconProps) => {
         AWS: <FaAws className={`${className || "text-lg"} text-[#FF9900]`} />,
         Typescript: <SiTypescript className={`${className || "text-lg"} text-[#3178C6]`} />,
         SCSS: <SiSass className={`${className || "text-lg"} text-[#CC6699]`} />,
+        Github: <SiGithub className={`${className || "text-lg"}`} />,
+        Mail: <GrMailOption className={`${className || "text-lg"}`} />,
+        LinkedIn: <SiLinkedin className={`${className || "text-lg"}`} />,
         Zustand: (
             <img
                 src="/icons/zustand.svg"
                 alt="zustand-logo"
-                className={"w-5 h-5 md:w-14 md:h-14"}
+                className={`${className || "w-5 h-5 md:w-14 md:h-14"}`}
             />
         ),
     };
