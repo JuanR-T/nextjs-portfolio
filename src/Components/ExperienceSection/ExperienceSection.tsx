@@ -3,7 +3,7 @@ import { useMessages, useTranslations } from "next-intl";
 import ExperienceItem from "../ExperienceItem/ExperienceItem";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
-const WorkExperience = () => {
+const ExperienceSection = () => {
     const t = useTranslations("Experiences");
     const messages = useMessages();
     const experiences = Object.keys(messages.Experiences).map(key => ({
@@ -40,4 +40,4 @@ const WorkExperience = () => {
     )
 }
 
-export default WorkExperience;
+export default ExperienceSection;

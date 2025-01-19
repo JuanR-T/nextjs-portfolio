@@ -6,7 +6,7 @@ import { useRef } from "react";
 import Card from "../Card/Card";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
-const Projects = () => {
+const ProjectsSection = () => {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -54,4 +54,4 @@ const Projects = () => {
     )
 }
 
-export default Projects;
+export default ProjectsSection;

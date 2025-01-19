@@ -3,7 +3,7 @@ import getTechIcon from "@/lib/getTechIcons";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-const Footer = () => {
+const FooterSection = () => {
     const currentYear = new Date().getFullYear();
     const t = useTranslations("Footer");
     return (
@@ -25,4 +25,4 @@ const Footer = () => {
         </section>
     )
 }
-export default Footer;
+export default FooterSection;
