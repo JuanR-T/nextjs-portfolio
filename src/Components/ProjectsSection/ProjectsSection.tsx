@@ -1,8 +1,8 @@
 "use client";
-import { portfolioProjects } from "@/data/data";
 import { useScroll } from "framer-motion";
 import { useMessages, useTranslations } from "next-intl";
 import { useRef } from "react";
+import { portfolioProjects } from "../../data/data";
 import Card from "../Card/Card";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
