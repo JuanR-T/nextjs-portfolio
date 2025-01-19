@@ -5,7 +5,7 @@ import { usePathname, useRouter } from '@/i18n/routing';
 import { ChevronDown } from 'lucide-react';
 import { useLocale } from 'next-intl';
 
-const LanguageSelector = () => {
+const LanguageSwitcher = () => {
     const pathname = usePathname();
     const router = useRouter();
     const currentLocale = useLocale();
@@ -35,4 +35,4 @@ const LanguageSelector = () => {
     );
 };
 
-export default LanguageSelector;
+export default LanguageSwitcher;
