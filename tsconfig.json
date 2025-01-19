@@ -19,7 +19,9 @@
                 "name": "next"
             }
         ],
-        "allowImportingTsExtensions": true
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
     "include": [
         "next-env.d.ts",

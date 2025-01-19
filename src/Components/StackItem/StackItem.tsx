@@ -1,6 +1,6 @@
 "use client";
+import getTechIcons from "@/lib/getTechIcons";
 import { motion } from "framer-motion";
-import getTechIcons from "../../lib/getTechIcons";
 import StackItemProps from "./StackItem.types";
 
 const StackItem = ({ index, technology, iconScale }: StackItemProps) => {

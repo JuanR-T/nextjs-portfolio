@@ -1,9 +1,9 @@
 'use client';
 
+import { availableLanguages } from '@/data/data';
+import { usePathname, useRouter } from '@/i18n/routing';
 import { ChevronDown } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import { availableLanguages } from '../../data/data';
-import { usePathname, useRouter } from '../../i18n/routing';
 
 const LanguageSwitcher = () => {
     const pathname = usePathname();
