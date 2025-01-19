@@ -1,7 +1,7 @@
 "use client";
-import { masteredTechnologies } from "@/data/data";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { masteredTechnologies } from "../../data/data";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import StackItem from "../StackItem/StackItem";
 
